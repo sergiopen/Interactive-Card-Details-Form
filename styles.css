@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Kumbh+Sans:wght@400;700&family=Montserrat:wght@500;700&family=Open+Sans&family=Outfit:wght@400;700&family=Overpass:wght@400;700&family=Poppins:wght@400;600&family=Roboto:wght@100&family=Space+Grotesk:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    font-family: 'Space Grotesk', serif;
+    overflow-x: hidden;
+}
+
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
+.container__card{
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    margin: 2.5rem 0;
+    color: #fff;
+}
+
+.content__card{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    min-width: 90%;
+}
+
+.final__container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: -.5rem;
+}
+
+.card__back__container{
+    position: relative;
+}
+
+.cvc__card{
+    position: absolute;
+    top: 35%;
+    left: 94%;
+}
+
+.number__card{
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    letter-spacing: 5.2px;
+}
+
+.card__back{
+    position: relative;
+    left: 3rem;
+}
+
+.container__card img{
+    margin-bottom: 1rem;
+}
+
+.img__bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: 100vh;
+    z-index: -1;
+}
+
+.container__form{
+    width: 25%;
+}
+
+.container__form input{
+    width: 100%;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+
+.text__error{
+    display: none;
+    color: #f00;
+}
+
+.error__name.active{
+    display: block;
+}
+
+.error__number.active{
+    display: block;
+}
+
+.error__date.active{
+    display: block;
+}
+
+.error__cvc.active{
+    display: block;
+}
+
+.container__form.active{
+    display: none;
+}
+
+.container__date{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.input__card__date{
+    max-width: 20%;
+    margin: auto;
+}
+
+.input__card__cvc{
+    margin: auto;
+    max-width: 48%;
+}
+
+.btn{
+    min-width: 100%;
+    padding: 10px;
+    border: 1px solid #000;
+    background-color: hsl(278, 68%, 11%);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.container__valid{
+    display: none;
+    min-width: 25%;
+    text-align: center;
+}
+
+.container__valid.active{
+    display: block;
+}
+
+.valid__title{
+    font-size: 1.5rem;
+    letter-spacing: .3rem;
+}
+
+.valid__sub{
+    color: #666;
+}
+
+@media screen and (max-width: 800px){
+    .img__bg{
+        width: 100%;
+    }
+
+    .card__back{
+        position: relative;
+        left: 15px;
+    }
+
+    .input__card__date{
+        max-width: 100%;
+    }
+    .input__card__cvc{
+        max-width: 100%;
+    }
+    .container__form{
+        margin-top: -10rem;
+        width: 75%;
+        margin-bottom: 2rem;
+    }
+    .container__valid{
+        margin-top: -8rem;
+        margin-bottom: 2rem;
+    }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Interactive card details form</title>
+</head>
+<body>
+
+  <main class="main">
+    <div class="container">
+      <img class="img__bg" src="images/bg-main-desktop.png" alt="">  
+      <div class="container__card">
+          <img src="images/bg-card-front.png" alt="">
+          <div class="card__back__container">
+            <img class="card__back" src="images/bg-card-back.png" alt="">
+            <p class="cvc__card">000</p>
+          </div>
+          <div class="content__card">
+            <img src="images/card-logo.svg" alt="">
+            <p class="number__card">0000 0000 0000 0000</p>
+            <div class="final__container">
+              <p class="name__card">FELICIA LEIRE</p>
+              <p class="date__end">09/00</p>
+            </div>
+          </div>
+        </div>
+        <div class="container__form">
+          <form action="">
+            <div class="input__item">
+              <p class="input__title">CARDHOLDER NAME</p>
+              <input class="input input__card__name" type="text" placeholder="e.g. Jane Appleseed">
+              <p class="text__error error__name">Can't be blank</p>
+            </div>
+            <div class="input__item">
+              <p class="input__title">CARD NUMBER</p>
+              <input class="input input__card__number" type="number" placeholder="e.g. 1234 5678 9123 0000" max="2">
+              <p class="text__error error__number">Can't be blank</p>
+            </div>
+            <div class="input__item">
+              <p class="input__title">EXP. DATE (MM/YY)</p>
+              <div class="container__date">
+                <input class="input input__card__date mm" type="number" placeholder="MM">
+                <input class="input input__card__date yy" type="number" placeholder="YY">
+                <input class="input input__card__cvc" type="number" placeholder="e.g 123" maxlength="3">
+              </div>
+              <p class="text__error error__date">MM/YY can't be blank</p>
+              <p class="text__error error__cvc">CVC Can't be blank</p>
+            </div>
+          </form>
+          <button class="btn" id="btn">Confirm</button>
+        
+        </div>
+        <div class="container__valid">
+          <img src="images/icon-complete.svg" alt="">
+          <p class="valid__title">THANK YOU!</p>
+          <p class="valid__sub">We've added your card details</p>
+          <button id="btn-valid" class="btn">Continue</button>
+        </div>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
